@@ -1,0 +1,11 @@
+query LoadGithubRepositories($login: String!){
+
+  user(login: $login) {
+      repositories(first:20){
+        nodes{
+          id
+          name
+        }
+      }
+    }
+}
